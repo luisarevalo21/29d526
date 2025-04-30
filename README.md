@@ -34,8 +34,8 @@ src/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/journey-builder.git
-   cd journey-builder
+   git clone https://github.com/luisarevalo21/29d526.git
+   cd 29d526
    ```
 
 2. Install dependencies:
