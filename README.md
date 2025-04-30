@@ -1,7 +1,3 @@
-Here's a clean and informative `README.md` file for your Journey Builder React Coding Challenge project. It highlights the progress you've made and outlines the original project goals for context:
-
----
-
 # Journey Builder – React Coding Challenge
 
 This project is a React-based implementation of a node-based UI system that visualizes and manages a **Directed Acyclic Graph (DAG)** of forms. It is a part of an internal tool developed at **Avantos** to handle form prefill logic across interconnected form submissions.
