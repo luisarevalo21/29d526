@@ -1,54 +1,67 @@
-# React + TypeScript + Vite
+Here's a clean and informative `README.md` file for your Journey Builder React Coding Challenge project. It highlights the progress you've made and outlines the original project goals for context:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# Journey Builder – React Coding Challenge
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a React-based implementation of a node-based UI system that visualizes and manages a **Directed Acyclic Graph (DAG)** of forms. It is a part of an internal tool developed at **Avantos** to handle form prefill logic across interconnected form submissions.
 
-## Expanding the ESLint configuration
+## ✅ Current Progress
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Successfully integrated **React Flow** to render nodes and edges from the DAG.
+- Fetched and displayed node data using the `action-blueprint-graph-get` API endpoint.
+- Enabled **click interaction** with nodes.
+- Displayed a **popover** UI on node click to show prefill configurations.
+- Laid the **foundation for a modal UI** that allows editing prefill mappings.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Technologies Used
+
+- **React**
+- **React Flow**
+- **TypeScript** (if applicable)
+- **Axios** or `fetch` (for API calls)
+
+## 🗂 Folder Structure (example)
+
+```
+src/
+├── components/
+│   ├── FormEdge.tsx
+│   ├── FormModal.tsx
+│   └── FormNode.tsx
+├── App.tsx
+└── index.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/yourusername/journey-builder.git
+   cd journey-builder
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the app locally:
+   ```bash
+   npm run dev
+   ```
+
+## 📌 Notes
+
+- Used the mock server provided
+- Ensure component logic can gracefully scale to support additional data sources in the future.
+- The UI does not need to be pixel-perfect, but should reflect core logic and functionality.
+
+## 🔮 Next Steps
+
+- Implement full modal UI with selectable source fields.
+- Integrate mocked global data into the modal.
+- Support editing and saving prefill configurations.
+- Add UI state persistence (optional).
