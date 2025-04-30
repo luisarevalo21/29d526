@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 } */
+
+.node-popup {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 0;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid black;
+}

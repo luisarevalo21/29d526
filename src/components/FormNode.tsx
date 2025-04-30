@@ -1,20 +1,25 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { Handle, Position } from "@xyflow/react";
+import DynamicFormIcon from "@mui/icons-material/DynamicForm";
+import NodeModal from "./NodePopup";
 
 const FormNode = ({ id, data }) => {
+  const [selectedNode, setSelectedNode] = useState(null);
   const onChange = useCallback(evt => {
-    console.log(evt.target.value);
+    // console.log(evt.target.value);
   }, []);
-  const handleClick = useCallback(() => {
-    console.log("clicked", id);
-  }, [id]);
 
   return (
-    <div className="react-flow__node-default form-node" key={data.component_key} onClick={handleClick}>
-      <h2>{id}</h2>
-      <Handle type="source" position={Position.Right} />
-      <strong>{data.name}</strong>
+    <div className="react-flow__node-default" style={{ padding: 10, minWidth: 150, display: "flex", alignItems: "center", gap: 5 }}>
       <Handle type="target" position={Position.Left} />
+      <div style={{ display: "flex", alignItems: "center", gap: 5, backgroundColor: "#007bff", borderRadius: 5, padding: 5, width: "auto" }}>
+        <DynamicFormIcon />
+      </div>
+      <div style={{ gap: 5, flexDirection: "column", alignItems: "flex-end", textAlign: "left", marginLeft: 10 }}>
+        <p style={{ margin: 0 }}>Form</p>
+        <h3>{data.name}</h3>
+      </div>
+      <Handle type="source" position={Position.Right} />
     </div>
   );
 };
